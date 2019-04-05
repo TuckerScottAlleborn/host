@@ -1,1 +1,115 @@
-<meta http-equiv="refresh" content="0; URL='https://www.patreon.com/snugzmeow'" />
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Snugzmeow.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link
+      rel="shortcut icon"
+      href="http://www.iconj.com/ico/i/f/ifcyslmoz2.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa"
+      rel="stylesheet"
+    />
+    <script src="main.js"></script>
+    <style>
+      body {
+        background-color: pink;
+        font-family: 'Comfortaa', cursive;
+      }
+
+      a {
+        display: inline-block;
+      }
+
+      .title {
+        opacity: 0.2;
+        padding-left: 20px;
+        font-size: 34px;
+      }
+
+      div.container .image-container {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #patreon-img {
+        max-width: 20vw;
+      }
+
+      #storenvy-img {
+        max-width: 20vw;
+        padding-bottom: 2%;
+      }
+
+      @media screen and (max-width: 1000px) {
+        #patreon-img {
+          max-width: 32vw;
+        }
+
+        #storenvy-img {
+          max-width: 32vw;
+        }
+
+        .title {
+          font-size: 24px;
+        }
+      }
+
+      @media screen and (max-width: 800px) {
+        #patreon-img {
+          max-width: 35vw;
+        }
+
+        #storenvy-img {
+          max-width: 35vw;
+        }
+        .title {
+          font-size: 18px;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        #patreon-img {
+          max-width: 38vw;
+        }
+
+        #storenvy-img {
+          max-width: 38vw;
+        }
+      }
+    </style>
+  </head>
+  <!-- STOP JUDGING MY CODE I DID THIS IN ONE HOUR IN ONE INDEX.HTML. GO AWAY. -->
+  <body>
+    <div class="container">
+      <h1 class="title">Snugzmeow.com</h1>
+      <div class="image-container">
+        <a href="https://www.patreon.com/snugzmeow">
+          <img
+            id="patreon-img"
+            class="image"
+            src="https://www.washingtonpost.com/resizer/pgU3-udmmzemaDqiDEn_a4_WGxU=/1024x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/Q6QIJOWCTE4WDGVVIGHWHCXERI.png"
+            alt="patreon"
+          />
+        </a>
+        <a href="https://snugzmeow.storenvy.com/">
+          <img
+            id="storenvy-img"
+            class="image"
+            src="https://www.doz.com/cms/wp-content/uploads/2014/07/storenvy.png"
+            alt="storenvy"
+          />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
