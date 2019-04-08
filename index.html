@@ -13,11 +13,16 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css?family=Comfortaa"
       rel="stylesheet"
     />
     <script src="main.js"></script>
     <style>
+      /* PAGE STYLES */
       body {
         background-color: pink;
         font-family: 'Comfortaa', cursive;
@@ -25,6 +30,18 @@
 
       a {
         display: inline-block;
+        color: black;
+        text-decoration: none;
+      }
+
+      /* TARGETED STYLES */
+
+      #patreon-img {
+        max-width: 20vw;
+      }
+
+      #storenvy-img {
+        max-width: 20vw;
       }
 
       .hiddenish {
@@ -34,24 +51,48 @@
         cursor: no-drop;
       }
 
-      .title {
-        opacity: 0.1;
-        padding-left: 20px;
-        font-size: 24px;
-        cursor: default;
+      .info {
+        padding-left: 5px;
       }
 
-      .image:hover {
+      .title {
+        opacity: 0.1;
+        font-size: 28px;
+        cursor: default;
+        color: black;
+      }
+
+      .animate:hover {
         animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
         transform: translate3d(0, 0, 0);
         backface-visibility: hidden;
         perspective: 1000px;
       }
 
+      .main-content {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .social {
+        text-align: center;
+      }
+
+      .social a {
+        color: black;
+        opacity: 1;
+        padding: 0 6px;
+      }
+
+      /* UTIL STYLES */
       @keyframes shake {
         10%,
         90% {
-          transform: translate3d(-1px, 0, 0);
+          transform: translate3d(-1px, 0px, 0);
         }
 
         20%,
@@ -62,30 +103,13 @@
         30%,
         50%,
         70% {
-          transform: translate3d(-4px, 0, 0);
+          transform: translate3d(-3px, 0, 0);
         }
 
         40%,
         60% {
-          transform: translate3d(4px, 0, 0);
+          transform: translate3d(3px, 0, 0);
         }
-      }
-
-      div.container .image-container {
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-      }
-
-      #patreon-img {
-        max-width: 20vw;
-      }
-
-      #storenvy-img {
-        max-width: 20vw;
       }
 
       @media screen and (max-width: 1000px) {
@@ -133,12 +157,33 @@
   <!-- STOP JUDGING MY CODE I DID THIS IN ONE HOUR SUPER STONED. GO AWAY. -->
   <body>
     <div class="container">
-      <h1 class="title">Snugzmeow.com</h1>
-      <div class="image-container">
+      <div class="info">
+        <h1 class="title">
+          Snugzmeow.com<span class="social">
+            <a
+              href="https://twitter.com/Snugzmeow"
+              class="animate fa fa-twitter"
+            ></a
+            ><a
+              href="https://www.instagram.com/snugzmeow/"
+              class="animate fa fa-instagram"
+            ></a
+            ><a
+              href="https://www.facebook.com/Snugzmeow/"
+              class="animate fa fa-facebook"
+            ></a
+            ><a
+              href="https://www.twitch.tv/Snugzmeow/"
+              class="animate fa fa-twitch"
+            ></a>
+          </span>
+        </h1>
+      </div>
+      <div class="main-content">
         <a href="https://www.patreon.com/snugzmeow">
           <img
             id="patreon-img"
-            class="image"
+            class="image animate"
             src="images/patreon_site.png"
             alt="patreon"
           />
@@ -146,7 +191,7 @@
         <a href="https://snugzmeow.storenvy.com/">
           <img
             id="storenvy-img"
-            class="image"
+            class="image animate"
             src="images/storeenvy_site.png"
             alt="storenvy"
           />
